@@ -63,7 +63,7 @@ function LoginScreen() {
     setError("");
     const { error } = await supabase.auth.signInWithOAuth({
       provider: "google",
-      options: { redirectTo: "https://health-tracker-er6l.onrender.com" },
+      options: { redirectTo: "https://healthtracker-wine-five.vercel.app" },
     });
     if (error) { setError(error.message); setLoading(false); }
   };
@@ -92,8 +92,8 @@ function LoginScreen() {
         position: "relative", zIndex: 1,
       }}>
         <div style={{ fontSize: 52, marginBottom: 12 }}>📖</div>
-        <h1 style={{ fontSize: 32, fontWeight: 800, color: "#fff", margin: "0 0 6px", letterSpacing: "-1px" }}>Habit Codex</h1>
-        <p style={{ fontSize: 14, color: "#64748b", margin: "0 0 40px" }}>Track your habits. Build your life.</p>
+        <h1 style={{ fontSize: 32, fontWeight: 800, color: "#fff", margin: "0 0 6px", letterSpacing: "-1px" }}>Health Tracker</h1>
+        <p style={{ fontSize: 14, color: "#64748b", margin: "0 0 40px" }}>Track your health. Build your life.</p>
 
         <button onClick={handleGoogle} disabled={loading} style={{
           width: "100%", padding: "14px 20px",
